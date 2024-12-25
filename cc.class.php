@@ -129,8 +129,8 @@ class CC
         );
         curl_setopt_array($ch, $options);
         $exec = curl_exec($ch);
-        $status = json_decode($exec);
-        switch ($status->error) {
+        $status = json_decode($exec); {
+
             case '2':
                 return $card . $this->color("red", " [ DIE ]");
                 break;
